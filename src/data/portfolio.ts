@@ -375,7 +375,7 @@ export const education = [
   {
     status: "Previous",
     degree: "Higher Secondary & Secondary Education",
-    institution: "Saradha Vijayalakshmi Matric Higher Secondary School",
+    institution: "Saradha Vidhyalaya Matric Higher Secondary School",
     place: "Tiruppur, Tamil Nadu",
     period: "",
     note: "School First in Grade 10",
