@@ -9,6 +9,24 @@
 import cropGuardImg from "@/assets/project-cropguard.jpg";
 import interviewIqImg from "@/assets/project-interviewiq.jpg";
 import studyPlannerImg from "@/assets/project-studyplanner.jpg";
+import certAiAgentWebinarImg from "@/assets/certificates/cert-ai-agent-webinar.jpg.asset.json";
+import certAiAgentWebinarPdf from "@/assets/certificates/cert-ai-agent-webinar.pdf.asset.json";
+import certCprImg from "@/assets/certificates/cert-hands-only-cpr.jpg.asset.json";
+import certCprPdf from "@/assets/certificates/cert-hands-only-cpr.pdf.asset.json";
+import certCodeEmyImg from "@/assets/certificates/cert-codeemy-campus-ambassador.jpg.asset.json";
+import certCodeEmyPdf from "@/assets/certificates/cert-codeemy-campus-ambassador.pdf.asset.json";
+import certKalamImg from "@/assets/certificates/cert-dr-kalam-young-achiever.jpg.asset.json";
+import certKalamPdf from "@/assets/certificates/cert-dr-kalam-young-achiever.pdf.asset.json";
+import certSmartMoveImg from "@/assets/certificates/cert-smart-move-hackathon.jpg.asset.json";
+import certSmartMovePdf from "@/assets/certificates/cert-smart-move-hackathon.pdf.asset.json";
+import certGeminiImg from "@/assets/certificates/cert-gemini-certified-student.jpg.asset.json";
+import certGeminiPdf from "@/assets/certificates/cert-gemini-certified-student.pdf.asset.json";
+import certIbmImg from "@/assets/certificates/cert-ibm-ai-fundamentals.jpg.asset.json";
+import certIbmPdf from "@/assets/certificates/cert-ibm-ai-fundamentals.pdf.asset.json";
+import certMatlabImg from "@/assets/certificates/cert-matlab-onramp.jpg.asset.json";
+import certMatlabPdf from "@/assets/certificates/cert-matlab-onramp.pdf.asset.json";
+import certProjectExpoImg from "@/assets/certificates/cert-project-expo-kpriet.jpg.asset.json";
+import certProjectExpoPdf from "@/assets/certificates/cert-project-expo-kpriet.pdf.asset.json";
 
 export const profile = {
   name: "Abhinivesh Purushothaman",
@@ -264,6 +282,69 @@ export const certifications: {
   image: string;
   url: string;
 }[] = [
+  {
+    title: "AI Fundamentals: Foundations for Understanding AI",
+    issuer: "IBM SkillsBuild",
+    date: "Nov 2026",
+    image: certIbmImg.url,
+    url: certIbmPdf.url,
+  },
+  {
+    title: "MATLAB Onramp",
+    issuer: "MathWorks",
+    date: "Nov 2026",
+    image: certMatlabImg.url,
+    url: certMatlabPdf.url,
+  },
+  {
+    title: "Gemini Certified Student",
+    issuer: "Google for Education",
+    date: "Nov 2026",
+    image: certGeminiImg.url,
+    url: certGeminiPdf.url,
+  },
+  {
+    title: "Hands-Only CPR Participation Certificate",
+    issuer: "American Heart Association",
+    date: "Oct 2026",
+    image: certCprImg.url,
+    url: certCprPdf.url,
+  },
+  {
+    title: "CodeEmy Campus Ambassador",
+    issuer: "CodeEmy Technologies",
+    date: "Sep 2026",
+    image: certCodeEmyImg.url,
+    url: certCodeEmyPdf.url,
+  },
+  {
+    title: "Dr. Kalam Young Achiever Award 2026",
+    issuer: "World Youth Federation",
+    date: "Sep 2026",
+    image: certKalamImg.url,
+    url: certKalamPdf.url,
+  },
+  {
+    title: "Smart Move Hackathon – Participation",
+    issuer: "",
+    date: "Sep 2026",
+    image: certSmartMoveImg.url,
+    url: certSmartMovePdf.url,
+  },
+  {
+    title: "Project Expo – Coconut Shell Toy & DIY Waste Bulb",
+    issuer: "KPR Institute of Engineering and Technology",
+    date: "Sep 2026",
+    image: certProjectExpoImg.url,
+    url: certProjectExpoPdf.url,
+  },
+  {
+    title: "Hack an AI Agent Live (When AI Trusts AI) – Webinar",
+    issuer: "",
+    date: "Sep 2026",
+    image: certAiAgentWebinarImg.url,
+    url: certAiAgentWebinarPdf.url,
+  },
   { title: "ANSYS Structural Dynamics", issuer: "", date: "", image: "", url: "" },
   { title: "3D Conduction Course", issuer: "", date: "", image: "", url: "" },
   { title: "International Hackathon 5.0", issuer: "", date: "", image: "", url: "" },
