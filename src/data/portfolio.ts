@@ -32,6 +32,8 @@ import certIh5Img from "@/assets/certificates/cert-international-hackathon-5.jpg
 import certIh5Pdf from "@/assets/certificates/cert-international-hackathon-5.pdf.asset.json";
 import certAdaptionImg from "@/assets/certificates/cert-adaption-ai-workshop.jpg.asset.json";
 import certAdaptionPdf from "@/assets/certificates/cert-adaption-ai-workshop.pdf.asset.json";
+import cert3dConductionImg from "@/assets/certificates/cert-ansys-3d-conduction.jpg.asset.json";
+import cert3dConductionPdf from "@/assets/certificates/cert-ansys-3d-conduction.pdf.asset.json";
 
 export const profile = {
   name: "Abhinivesh Purushothaman",
@@ -376,8 +378,14 @@ export const certifications: {
     image: certAiAgentWebinarImg.url,
     url: certAiAgentWebinarPdf.url,
   },
-  { title: "3D Conduction Course", topics: ["Engineering"], issuer: "", date: "", image: "", url: "" },
-  { title: "Technical Courses & Learning Programs", topics: [], issuer: "", date: "", image: "", url: "" },
+  {
+    title: "Ansys Course Completion – 3D Conduction",
+    topics: ["Engineering"],
+    issuer: "Ansys",
+    date: "Nov 2026",
+    image: cert3dConductionImg.url,
+    url: cert3dConductionPdf.url,
+  },
 ];
 
 export const education = [
