@@ -278,12 +278,15 @@ export const achievements: {
 export const certifications: {
   title: string;
   issuer: string;
+  /** Topics used by the filter chips — add or rename freely. */
+  topics: string[];
   date: string;
   image: string;
   url: string;
 }[] = [
   {
     title: "AI Fundamentals: Foundations for Understanding AI",
+    topics: ["AI & ML"],
     issuer: "IBM SkillsBuild",
     date: "Nov 2026",
     image: certIbmImg.url,
@@ -291,6 +294,7 @@ export const certifications: {
   },
   {
     title: "MATLAB Onramp",
+    topics: ["Programming & Tools"],
     issuer: "MathWorks",
     date: "Nov 2026",
     image: certMatlabImg.url,
@@ -298,6 +302,7 @@ export const certifications: {
   },
   {
     title: "Gemini Certified Student",
+    topics: ["AI & ML"],
     issuer: "Google for Education",
     date: "Nov 2026",
     image: certGeminiImg.url,
@@ -305,6 +310,7 @@ export const certifications: {
   },
   {
     title: "Hands-Only CPR Participation Certificate",
+    topics: ["Health & Safety"],
     issuer: "American Heart Association",
     date: "Oct 2026",
     image: certCprImg.url,
@@ -312,6 +318,7 @@ export const certifications: {
   },
   {
     title: "CodeEmy Campus Ambassador",
+    topics: ["Leadership"],
     issuer: "CodeEmy Technologies",
     date: "Sep 2026",
     image: certCodeEmyImg.url,
@@ -319,6 +326,7 @@ export const certifications: {
   },
   {
     title: "Dr. Kalam Young Achiever Award 2026",
+    topics: ["Awards"],
     issuer: "World Youth Federation",
     date: "Sep 2026",
     image: certKalamImg.url,
@@ -326,6 +334,7 @@ export const certifications: {
   },
   {
     title: "Smart Move Hackathon – Participation",
+    topics: ["Hackathons"],
     issuer: "",
     date: "Sep 2026",
     image: certSmartMoveImg.url,
@@ -333,6 +342,7 @@ export const certifications: {
   },
   {
     title: "Project Expo – Coconut Shell Toy & DIY Waste Bulb",
+    topics: ["Projects & Expos"],
     issuer: "KPR Institute of Engineering and Technology",
     date: "Sep 2026",
     image: certProjectExpoImg.url,
@@ -340,15 +350,16 @@ export const certifications: {
   },
   {
     title: "Hack an AI Agent Live (When AI Trusts AI) – Webinar",
+    topics: ["AI & ML"],
     issuer: "",
     date: "Sep 2026",
     image: certAiAgentWebinarImg.url,
     url: certAiAgentWebinarPdf.url,
   },
-  { title: "ANSYS Structural Dynamics", issuer: "", date: "", image: "", url: "" },
-  { title: "3D Conduction Course", issuer: "", date: "", image: "", url: "" },
-  { title: "International Hackathon 5.0", issuer: "", date: "", image: "", url: "" },
-  { title: "Technical Courses & Learning Programs", issuer: "", date: "", image: "", url: "" },
+  { title: "ANSYS Structural Dynamics", topics: ["Engineering"], issuer: "", date: "", image: "", url: "" },
+  { title: "3D Conduction Course", topics: ["Engineering"], issuer: "", date: "", image: "", url: "" },
+  { title: "International Hackathon 5.0", topics: ["Hackathons"], issuer: "", date: "", image: "", url: "" },
+  { title: "Technical Courses & Learning Programs", topics: [], issuer: "", date: "", image: "", url: "" },
 ];
 
 export const education = [

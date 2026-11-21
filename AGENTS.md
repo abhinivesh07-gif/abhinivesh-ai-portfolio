@@ -35,3 +35,5 @@ use the editor.
 - Empty links render a "Coming soon" state via `LinkButton`/`SocialLinks` instead of a URL; never invent links or credentials.
 - The portfolio is one long scrolling page at `/` with in-page section anchors, because the owner asked for a sticky nav with smooth scrolling between sections.
 - Contact form messages are inserted from the browser into `public.contact_messages` (insert-only for anon; no read policy), validated by the shared zod schema in `src/lib/contact-schema.ts`.
+- The AI certificate finder is a public server function (`src/lib/certificate-finder.functions.ts`) that sends the certificate list from `portfolio.ts` to Lovable AI Gateway and returns indexes into that list, so it can never show a certificate that isn't in the collection; results are re-validated by `normalizeMatches`.
+- Certification filter options (issuer, topic, year) are derived from `portfolio.ts` data via `src/lib/certificate-filters.ts`, so editing a certificate's issuer/date/topics updates the filters with no UI change.
