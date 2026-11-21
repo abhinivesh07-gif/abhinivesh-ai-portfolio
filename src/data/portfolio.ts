@@ -13,8 +13,8 @@ import certAiAgentWebinarImg from "@/assets/certificates/cert-ai-agent-webinar.j
 import certAiAgentWebinarPdf from "@/assets/certificates/cert-ai-agent-webinar.pdf.asset.json";
 import certCprImg from "@/assets/certificates/cert-hands-only-cpr.jpg.asset.json";
 import certCprPdf from "@/assets/certificates/cert-hands-only-cpr.pdf.asset.json";
-import certCodeEmyImg from "@/assets/certificates/cert-codeemy-campus-ambassador.jpg.asset.json";
-import certCodeEmyPdf from "@/assets/certificates/cert-codeemy-campus-ambassador.pdf.asset.json";
+import certSihImg from "@/assets/certificates/cert-sih-internal-hackathon.jpg.asset.json";
+import certSihPdf from "@/assets/certificates/cert-sih-internal-hackathon.pdf.asset.json";
 import certKalamImg from "@/assets/certificates/cert-dr-kalam-young-achiever.jpg.asset.json";
 import certKalamPdf from "@/assets/certificates/cert-dr-kalam-young-achiever.pdf.asset.json";
 import certSmartMoveImg from "@/assets/certificates/cert-smart-move-hackathon.jpg.asset.json";
@@ -317,12 +317,12 @@ export const certifications: {
     url: certCprPdf.url,
   },
   {
-    title: "CodeEmy Campus Ambassador",
-    topics: ["Leadership"],
-    issuer: "CodeEmy Technologies",
+    title: "Smart India Hackathon 2026 – Internal Hackathon Participation",
+    topics: ["Hackathons"],
+    issuer: "KPR Institute of Engineering and Technology",
     date: "Sep 2026",
-    image: certCodeEmyImg.url,
-    url: certCodeEmyPdf.url,
+    image: certSihImg.url,
+    url: certSihPdf.url,
   },
   {
     title: "Dr. Kalam Young Achiever Award 2026",
