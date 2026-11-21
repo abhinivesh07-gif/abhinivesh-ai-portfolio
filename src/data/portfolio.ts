@@ -26,6 +26,12 @@ import certMatlabImg from "@/assets/certificates/cert-matlab-onramp.jpg.asset.js
 import certMatlabPdf from "@/assets/certificates/cert-matlab-onramp.pdf.asset.json";
 import certProjectExpoImg from "@/assets/certificates/cert-project-expo-kpriet.jpg.asset.json";
 import certProjectExpoPdf from "@/assets/certificates/cert-project-expo-kpriet.pdf.asset.json";
+import certAnsysImg from "@/assets/certificates/cert-ansys-structural-dynamics.jpg.asset.json";
+import certAnsysPdf from "@/assets/certificates/cert-ansys-structural-dynamics.pdf.asset.json";
+import certIh5Img from "@/assets/certificates/cert-international-hackathon-5.jpg.asset.json";
+import certIh5Pdf from "@/assets/certificates/cert-international-hackathon-5.pdf.asset.json";
+import certAdaptionImg from "@/assets/certificates/cert-adaption-ai-workshop.jpg.asset.json";
+import certAdaptionPdf from "@/assets/certificates/cert-adaption-ai-workshop.pdf.asset.json";
 
 export const profile = {
   name: "Abhinivesh Purushothaman",
@@ -232,15 +238,6 @@ export const experience: {
     result: "",
   },
   {
-    title: "Ideathon Participation",
-    kind: "Ideathons",
-    icon: "lightbulb",
-    description:
-      "Pitching and refining original ideas — validating problems and shaping practical solutions.",
-    date: "",
-    result: "",
-  },
-  {
     title: "Collaborative Team Projects",
     kind: "Teamwork",
     icon: "users",
@@ -283,6 +280,30 @@ export const certifications: {
   image: string;
   url: string;
 }[] = [
+  {
+    title: "Ansys Course Completion – Structural Dynamics",
+    topics: ["Engineering"],
+    issuer: "Ansys",
+    date: "Nov 2026",
+    image: certAnsysImg.url,
+    url: certAnsysPdf.url,
+  },
+  {
+    title: "International Hackathon 5.0 – Round 1 Participation",
+    topics: ["Hackathons"],
+    issuer: "KIT – KalaignarKarunanidhi Institute of Technology",
+    date: "Nov 2026",
+    image: certIh5Img.url,
+    url: certIh5Pdf.url,
+  },
+  {
+    title: "From Problem Statement to AI Solution – Build with Adaption (Pre-Hackathon Workshop)",
+    topics: ["AI & ML", "Hackathons"],
+    issuer: "ECLearnix EdTech LLC",
+    date: "Nov 2026",
+    image: certAdaptionImg.url,
+    url: certAdaptionPdf.url,
+  },
   {
     title: "AI Fundamentals: Foundations for Understanding AI",
     topics: ["AI & ML"],
@@ -355,9 +376,7 @@ export const certifications: {
     image: certAiAgentWebinarImg.url,
     url: certAiAgentWebinarPdf.url,
   },
-  { title: "ANSYS Structural Dynamics", topics: ["Engineering"], issuer: "", date: "", image: "", url: "" },
   { title: "3D Conduction Course", topics: ["Engineering"], issuer: "", date: "", image: "", url: "" },
-  { title: "International Hackathon 5.0", topics: ["Hackathons"], issuer: "", date: "", image: "", url: "" },
   { title: "Technical Courses & Learning Programs", topics: [], issuer: "", date: "", image: "", url: "" },
 ];
 
