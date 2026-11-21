@@ -1,0 +1,291 @@
+/**
+ * ============================================================
+ *  PORTFOLIO CONTENT — edit everything about you in this file.
+ * ============================================================
+ *  - Leave a link as "" (empty) and the site shows a tidy
+ *    "Coming soon" state instead of a broken link.
+ *  - Paste a full URL (https://...) to switch a button on.
+ */
+import cropGuardImg from "@/assets/project-cropguard.jpg";
+import interviewIqImg from "@/assets/project-interviewiq.jpg";
+import studyPlannerImg from "@/assets/project-studyplanner.jpg";
+
+export const profile = {
+  name: "Abhinivesh Purushothaman",
+  firstName: "Abhinivesh",
+  initials: "AP",
+  role: "CSE (AI & ML) Student | Aspiring AI/ML Engineer | Python Developer",
+  heroRoles: ["AI/ML Enthusiast", "Developer", "Problem Solver"],
+  college: "KPR Institute of Engineering and Technology",
+  collegeCity: "Coimbatore, Tamil Nadu",
+  location: "Tiruppur, Tamil Nadu, India",
+  tagline: "Building Intelligent Solutions. Turning Ideas Into Impact.",
+  headline: "Turning Curiosity Into Code & Ideas Into Innovation.",
+  heroDescription:
+    "Exploring Artificial Intelligence, Machine Learning, and Software Development to create meaningful digital experiences.",
+  intro:
+    "I'm a passionate Computer Science student specializing in Artificial Intelligence and Machine Learning. I enjoy exploring emerging technologies, developing innovative solutions, participating in hackathons, and continuously improving my technical skills. My goal is to build impactful technology that solves real-world problems.",
+  /** Path or URL to your photo, e.g. "/images/abhinivesh.jpg". Empty shows your initials. */
+  photo: "",
+  /** Path or URL to your resume PDF, e.g. "/resume.pdf" (put the file in /public). */
+  resumeUrl: "",
+};
+
+export const socials = {
+  /** e.g. "yourname@gmail.com" */
+  email: "",
+  /** e.g. "https://www.linkedin.com/in/your-handle" */
+  linkedin: "",
+  /** e.g. "https://github.com/your-handle" */
+  github: "",
+};
+
+export const navItems = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
+  { id: "achievements", label: "Achievements" },
+  { id: "certifications", label: "Certifications" },
+  { id: "contact", label: "Contact" },
+] as const;
+
+export const about = {
+  paragraphs: [
+    "I'm a Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning. I have a strong interest in programming, emerging technologies, and innovation. I enjoy learning new concepts, experimenting with ideas, and transforming them into practical solutions.",
+    "I actively participate in hackathons, ideathons, technical competitions, and learning programs to improve my technical and problem-solving abilities.",
+    "I believe in continuous learning, creativity, and building technology that makes a difference.",
+  ],
+  highlights: [
+    {
+      icon: "learner",
+      title: "Continuous Learner",
+      text: "Always picking up new concepts, tools and ideas — and putting them into practice.",
+    },
+    {
+      icon: "innovation",
+      title: "Innovation Enthusiast",
+      text: "Drawn to hackathons and ideathons where bold ideas become working prototypes.",
+    },
+    {
+      icon: "solver",
+      title: "Problem Solver",
+      text: "Breaking complex problems into clear, logical steps and practical solutions.",
+    },
+  ],
+} as const;
+
+export type SkillIcon =
+  | "python" | "c" | "cpp" | "java" | "html" | "css" | "javascript" | "mysql" | "pandas"
+  | "oop" | "problem" | "logic" | "database" | "ai" | "ml" | "datascience";
+
+export const skillGroups: {
+  title: string;
+  icon: "code" | "globe" | "database" | "layers" | "sparkles";
+  blurb: string;
+  skills: { name: string; icon: SkillIcon }[];
+}[] = [
+  {
+    title: "Programming Languages",
+    icon: "code",
+    blurb: "The foundation I build everything on.",
+    skills: [
+      { name: "Python", icon: "python" },
+      { name: "C", icon: "c" },
+      { name: "C++", icon: "cpp" },
+      { name: "Java", icon: "java" },
+    ],
+  },
+  {
+    title: "Emerging Technologies",
+    icon: "sparkles",
+    blurb: "Where my curiosity is pointed.",
+    skills: [
+      { name: "Artificial Intelligence", icon: "ai" },
+      { name: "Machine Learning", icon: "ml" },
+      { name: "Data Science", icon: "datascience" },
+    ],
+  },
+  {
+    title: "Web Technologies",
+    icon: "globe",
+    blurb: "Shaping ideas into interfaces.",
+    skills: [
+      { name: "HTML", icon: "html" },
+      { name: "CSS", icon: "css" },
+      { name: "JavaScript", icon: "javascript" },
+    ],
+  },
+  {
+    title: "Data & Database",
+    icon: "database",
+    blurb: "Storing, querying and analysing data.",
+    skills: [
+      { name: "MySQL", icon: "mysql" },
+      { name: "Pandas", icon: "pandas" },
+    ],
+  },
+  {
+    title: "Core Concepts",
+    icon: "layers",
+    blurb: "How I think about software.",
+    skills: [
+      { name: "Object-Oriented Programming", icon: "oop" },
+      { name: "Problem Solving", icon: "problem" },
+      { name: "Logical Thinking", icon: "logic" },
+      { name: "Database Fundamentals", icon: "database" },
+    ],
+  },
+];
+
+export const projects = [
+  {
+    title: "CropGuard AI",
+    category: "AI · Agriculture",
+    subtitle: "AI-Based Crop Disease and Pest Detection & Management System.",
+    description:
+      "An intelligent agricultural solution designed to help farmers identify crop diseases and pest-related problems and receive suitable management recommendations.",
+    tech: ["Python", "Machine Learning", "Image Classification"],
+    image: cropGuardImg,
+    imageAlt: "Holographic leaf with an AI scanner detecting a pest",
+    github: "",
+    demo: "",
+  },
+  {
+    title: "InterviewIQ",
+    category: "AI · Career",
+    subtitle: "AI-Powered Interview Preparation Platform.",
+    description:
+      "An intelligent interview preparation concept designed to help students improve their interview readiness through AI-based assistance and structured preparation.",
+    tech: ["Python", "Artificial Intelligence", "NLP"],
+    image: interviewIqImg,
+    imageAlt: "Glowing AI assistant orb with a microphone and chat bubbles",
+    github: "",
+    demo: "",
+  },
+  {
+    title: "Smart Study Planner",
+    category: "Productivity",
+    subtitle: "Plan smarter. Study better.",
+    description:
+      "A smart planning solution designed to help students organize academic tasks, manage schedules, and improve productivity.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    image: studyPlannerImg,
+    imageAlt: "Glass calendar with task cards, a checklist and a clock",
+    github: "",
+    demo: "",
+  },
+];
+
+/** Leave date/result empty to hide them. Fill in once confirmed, e.g. date: "Mar 2026". */
+export const experience: {
+  title: string;
+  kind: string;
+  icon: "rocket" | "lightbulb" | "flag" | "globe" | "users" | "puzzle";
+  description: string;
+  date: string;
+  result: string;
+}[] = [
+  {
+    title: "Hackathon Participation",
+    kind: "Hackathons",
+    icon: "rocket",
+    description:
+      "Building prototypes under time pressure with a team — from problem statement to working demo.",
+    date: "",
+    result: "",
+  },
+  {
+    title: "International Hackathon 5.0",
+    kind: "Hackathon",
+    icon: "globe",
+    description:
+      "Took part in International Hackathon 5.0, collaborating on an idea and presenting a solution.",
+    date: "",
+    result: "",
+  },
+  {
+    title: "Smart India Hackathon (SIH)",
+    kind: "National Innovation",
+    icon: "flag",
+    description:
+      "Engaging with Smart India Hackathon problem statements focused on real national challenges.",
+    date: "",
+    result: "",
+  },
+  {
+    title: "Ideathon Participation",
+    kind: "Ideathons",
+    icon: "lightbulb",
+    description:
+      "Pitching and refining original ideas — validating problems and shaping practical solutions.",
+    date: "",
+    result: "",
+  },
+  {
+    title: "Collaborative Team Projects",
+    kind: "Teamwork",
+    icon: "users",
+    description:
+      "Working with peers on projects like CropGuard AI and InterviewIQ, sharing roles and ideas.",
+    date: "",
+    result: "",
+  },
+  {
+    title: "Innovation & Problem-Solving",
+    kind: "Continuous",
+    icon: "puzzle",
+    description:
+      "Technical competitions, learning programs and challenges that sharpen logical thinking.",
+    date: "",
+    result: "",
+  },
+];
+
+export const achievements: {
+  title: string;
+  category: string;
+  icon: "karate" | "throwball" | "trophy" | "medal" | "academic" | "quiz";
+}[] = [
+  { title: "Brown Belt – 1st Dan in Karate", category: "Martial Arts", icon: "karate" },
+  { title: "Zonal-Level Throwball Winner", category: "Sports", icon: "trophy" },
+  { title: "District-Level Throwball Runner-Up", category: "Sports", icon: "medal" },
+  { title: "District-Level Throwball Player", category: "Sports", icon: "throwball" },
+  { title: "Academic Excellence – School First in Grade 10", category: "Academics", icon: "academic" },
+  { title: "District-Level Quiz Winner", category: "Quiz", icon: "quiz" },
+];
+
+/** Fill in issuer, date, image (path/URL) and url once you have them. Empty fields are hidden. */
+export const certifications: {
+  title: string;
+  issuer: string;
+  date: string;
+  image: string;
+  url: string;
+}[] = [
+  { title: "ANSYS Structural Dynamics", issuer: "", date: "", image: "", url: "" },
+  { title: "3D Conduction Course", issuer: "", date: "", image: "", url: "" },
+  { title: "International Hackathon 5.0", issuer: "", date: "", image: "", url: "" },
+  { title: "Technical Courses & Learning Programs", issuer: "", date: "", image: "", url: "" },
+];
+
+export const education = [
+  {
+    status: "Current",
+    degree:
+      "Bachelor of Engineering – Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+    institution: "KPR Institute of Engineering and Technology",
+    place: "Coimbatore, Tamil Nadu",
+    period: "",
+    note: "Currently pursuing",
+  },
+  {
+    status: "Previous",
+    degree: "Higher Secondary & Secondary Education",
+    institution: "Saradha Vijayalakshmi Matric Higher Secondary School",
+    place: "Tiruppur, Tamil Nadu",
+    period: "",
+    note: "School First in Grade 10",
+  },
+];

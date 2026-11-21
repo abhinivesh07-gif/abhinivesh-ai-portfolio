@@ -28,3 +28,10 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All personal content (bio, links, projects, experience, achievements, certificates, education) lives in `src/data/portfolio.ts`; components only render it, so the owner can edit one file.
+- Empty links render a "Coming soon" state via `LinkButton`/`SocialLinks` instead of a URL; never invent links or credentials.
+- The portfolio is one long scrolling page at `/` with in-page section anchors, because the owner asked for a sticky nav with smooth scrolling between sections.
+- Contact form messages are inserted from the browser into `public.contact_messages` (insert-only for anon; no read policy), validated by the shared zod schema in `src/lib/contact-schema.ts`.
