@@ -17,8 +17,7 @@ import certSihImg from "@/assets/certificates/cert-sih-internal-hackathon.jpg.as
 import certSihPdf from "@/assets/certificates/cert-sih-internal-hackathon.pdf.asset.json";
 import certKalamImg from "@/assets/certificates/cert-dr-kalam-young-achiever.jpg.asset.json";
 import certKalamPdf from "@/assets/certificates/cert-dr-kalam-young-achiever.pdf.asset.json";
-import certSmartMoveImg from "@/assets/certificates/cert-smart-move-hackathon.jpg.asset.json";
-import certSmartMovePdf from "@/assets/certificates/cert-smart-move-hackathon.pdf.asset.json";
+import certSmartMoveImg from "@/assets/certificates/cert-smart-move-hackathon-new.jpg.asset.json";
 import certGeminiImg from "@/assets/certificates/cert-gemini-certified-student.jpg.asset.json";
 import certGeminiPdf from "@/assets/certificates/cert-gemini-certified-student.pdf.asset.json";
 import certIbmImg from "@/assets/certificates/cert-ibm-ai-fundamentals.jpg.asset.json";
@@ -335,10 +334,10 @@ export const certifications: {
   {
     title: "Smart Move Hackathon – Participation",
     topics: ["Hackathons"],
-    issuer: "",
+    issuer: "KIT – KalaignarKarunanidhi Institute of Technology",
     date: "Sep 2026",
     image: certSmartMoveImg.url,
-    url: certSmartMovePdf.url,
+    url: certSmartMoveImg.url,
   },
   {
     title: "Project Expo – Coconut Shell Toy & DIY Waste Bulb",
