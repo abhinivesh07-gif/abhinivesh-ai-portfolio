@@ -6,8 +6,6 @@
  *    "Coming soon" state instead of a broken link.
  *  - Paste a full URL (https://...) to switch a button on.
  */
-import cropGuardImg from "@/assets/project-cropguard.jpg";
-import interviewIqImg from "@/assets/project-interviewiq.jpg";
 import studyPlannerImg from "@/assets/project-studyplanner.jpg";
 import certAiAgentWebinarImg from "@/assets/certificates/cert-ai-agent-webinar.jpg.asset.json";
 import certAiAgentWebinarPdf from "@/assets/certificates/cert-ai-agent-webinar.pdf.asset.json";
@@ -176,30 +174,6 @@ export const projects: {
   demo: string;
   githubLabel?: string;
 }[] = [
-  {
-    title: "CropGuard AI",
-    category: "AI · Agriculture",
-    subtitle: "AI-Based Crop Disease and Pest Detection & Management System.",
-    description:
-      "An intelligent agricultural solution designed to help farmers identify crop diseases and pest-related problems and receive suitable management recommendations.",
-    tech: ["Python", "Machine Learning", "Image Classification"],
-    image: cropGuardImg,
-    imageAlt: "Holographic leaf with an AI scanner detecting a pest",
-    github: "",
-    demo: "",
-  },
-  {
-    title: "InterviewIQ",
-    category: "AI · Career",
-    subtitle: "AI-Powered Interview Preparation Platform.",
-    description:
-      "An intelligent interview preparation concept designed to help students improve their interview readiness through AI-based assistance and structured preparation.",
-    tech: ["Python", "Artificial Intelligence", "NLP"],
-    image: interviewIqImg,
-    imageAlt: "Glowing AI assistant orb with a microphone and chat bubbles",
-    github: "",
-    demo: "",
-  },
   {
     title: "Smart Study Planner",
     category: "Productivity",
