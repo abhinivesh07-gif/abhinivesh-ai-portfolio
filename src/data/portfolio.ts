@@ -164,7 +164,18 @@ export const skillGroups: {
   },
 ];
 
-export const projects = [
+export const projects: {
+  title: string;
+  category: string;
+  subtitle: string;
+  description: string;
+  tech: string[];
+  image: string;
+  imageAlt: string;
+  github: string;
+  demo: string;
+  githubLabel?: string;
+}[] = [
   {
     title: "CropGuard AI",
     category: "AI · Agriculture",
@@ -198,8 +209,9 @@ export const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     image: studyPlannerImg,
     imageAlt: "Glass calendar with task cards, a checklist and a clock",
-    github: "",
-    demo: "",
+    github: "https://github.com/abhinivesh07-gif/smart_study_planner",
+    demo: "https://precious-choux-40b208.netlify.app",
+    githubLabel: "View on GitHub",
   },
 ];
 

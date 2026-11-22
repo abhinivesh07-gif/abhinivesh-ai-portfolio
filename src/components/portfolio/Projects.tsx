@@ -60,7 +60,7 @@ export function Projects() {
 
                   <div className="mt-8 flex flex-wrap gap-3">
                     <LinkButton href={p.github} variant="glass">
-                      <Github /> GitHub
+                      <Github /> {p.githubLabel ?? "GitHub"}
                     </LinkButton>
                     <LinkButton href={p.demo} variant="hero">
                       Live Demo <ArrowUpRight />
