@@ -1,4 +1,5 @@
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, Github, Smartphone } from "lucide-react";
+import { isValidDownloadUrl } from "@/lib/project-links";
 import { projects } from "@/data/portfolio";
 import { Reveal, Section, SectionHeading } from "./primitives";
 import { LinkButton } from "./LinkButton";
@@ -15,7 +16,7 @@ export function Projects() {
             Ideas I'm <span className="text-gradient">Bringing to Life</span>
           </>
         }
-        description="Concepts and builds where I apply AI and software development to real problems — from farms to classrooms."
+        description="Concepts and builds where I apply AI and software development to real problems — built to make everyday student life easier."
       />
 
       <div className="space-y-10 md:space-y-14">
@@ -30,8 +31,9 @@ export function Projects() {
                       src={p.image}
                       alt={p.imageAlt}
                       loading="lazy"
-                      width={1254}
-                      height={1254}
+                      decoding="async"
+                      width={960}
+                      height={960}
                       className="size-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
                     />
                   </div>
@@ -65,6 +67,11 @@ export function Projects() {
                     <LinkButton href={p.demo} variant="hero">
                       Live Demo <ArrowUpRight />
                     </LinkButton>
+                    {isValidDownloadUrl(p.apk) && (
+                      <LinkButton href={p.apk.trim()} variant="glass">
+                        <Smartphone /> Download APK
+                      </LinkButton>
+                    )}
                   </div>
                 </div>
               </article>

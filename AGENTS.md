@@ -32,7 +32,7 @@ use the editor.
 ## Project rules
 
 - All personal content (bio, links, projects, experience, achievements, certificates, education) lives in `src/data/portfolio.ts`; components only render it, so the owner can edit one file.
-- Empty links render a "Coming soon" state via `LinkButton`/`SocialLinks` instead of a URL; never invent links or credentials.
+- Empty links render a "Coming soon" state via `LinkButton`/`SocialLinks` instead of a URL; never invent links or credentials. Exception: optional extras like a project APK are hidden until `isValidDownloadUrl` (`src/lib/project-links.ts`) accepts the link, so the live site shows no dead buttons for things that may never exist.
 - The portfolio is one long scrolling page at `/` with in-page section anchors, because the owner asked for a sticky nav with smooth scrolling between sections.
 - Contact form messages are inserted from the browser into `public.contact_messages` (insert-only for anon; no read policy), validated by the shared zod schema in `src/lib/contact-schema.ts`.
 - The AI certificate finder is a public server function (`src/lib/certificate-finder.functions.ts`) that sends the certificate list from `portfolio.ts` to Lovable AI Gateway and returns indexes into that list, so it can never show a certificate that isn't in the collection; results are re-validated by `normalizeMatches`.

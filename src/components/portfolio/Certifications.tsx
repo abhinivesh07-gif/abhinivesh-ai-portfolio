@@ -87,6 +87,7 @@ export function Certifications() {
                     src={c.image}
                     alt={`${c.title} certificate`}
                     loading="lazy"
+                    decoding="async"
                     className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 ) : (

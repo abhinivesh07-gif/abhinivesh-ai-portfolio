@@ -6,7 +6,7 @@
  *    "Coming soon" state instead of a broken link.
  *  - Paste a full URL (https://...) to switch a button on.
  */
-import studyPlannerImg from "@/assets/project-studyplanner.jpg";
+import studyPlannerImg from "@/assets/project-studyplanner.webp";
 import certAiAgentWebinarImg from "@/assets/certificates/cert-ai-agent-webinar.jpg.asset.json";
 import certAiAgentWebinarPdf from "@/assets/certificates/cert-ai-agent-webinar.pdf.asset.json";
 import certCprImg from "@/assets/certificates/cert-hands-only-cpr.jpg.asset.json";
@@ -173,6 +173,11 @@ export const projects: {
   github: string;
   demo: string;
   githubLabel?: string;
+  /**
+   * Direct https link to the Android APK (e.g. a GitHub release or Google Drive file).
+   * Leave "" to hide the "Download APK" button; paste a link and it appears automatically.
+   */
+  apk: string;
 }[] = [
   {
     title: "Smart Study Planner",
@@ -186,6 +191,7 @@ export const projects: {
     github: "https://github.com/abhinivesh07-gif/smart_study_planner",
     demo: "https://precious-choux-40b208.netlify.app",
     githubLabel: "View on GitHub",
+    apk: "",
   },
 ];
 
@@ -230,7 +236,7 @@ export const experience: {
     kind: "Teamwork",
     icon: "users",
     description:
-      "Working with peers on projects like CropGuard AI and InterviewIQ, sharing roles and ideas.",
+      "Working with peers on team projects and hackathon builds, sharing roles and ideas.",
     date: "",
     result: "",
   },

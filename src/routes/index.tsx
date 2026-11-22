@@ -12,6 +12,7 @@ import { Certifications } from "@/components/portfolio/Certifications";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { CursorGlow } from "@/components/portfolio/CursorGlow";
+import { profile, socials } from "@/data/portfolio";
 
 const title = "Abhinivesh Purushothaman — AI/ML Student & Python Developer";
 const description =
@@ -25,10 +26,14 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "profile" },
+      { property: "og:url", content: "/" },
+      { property: "og:site_name", content: "Abhinivesh Purushothaman" },
+      { name: "keywords", content: "Abhinivesh Purushothaman, AI ML student, Python developer, KPRIET, CSE AI and ML, portfolio, Coimbatore, Tiruppur" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
     ],
+    links: [{ rel: "canonical", href: "/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -37,7 +42,11 @@ export const Route = createFileRoute("/")({
           "@type": "Person",
           name: "Abhinivesh Purushothaman",
           jobTitle: "CSE (AI & ML) Student",
-          alumniOf: "KPR Institute of Engineering and Technology",
+          description: profile.tagline,
+          alumniOf: { "@type": "CollegeOrUniversity", name: profile.college },
+          knowsAbout: ["Artificial Intelligence", "Machine Learning", "Python", "Data Science", "Web Development"],
+          ...(socials.email ? { email: `mailto:${socials.email}` } : {}),
+          sameAs: [socials.linkedin, socials.github].filter(Boolean),
           address: { "@type": "PostalAddress", addressLocality: "Tiruppur", addressRegion: "Tamil Nadu", addressCountry: "IN" },
         }),
       },
