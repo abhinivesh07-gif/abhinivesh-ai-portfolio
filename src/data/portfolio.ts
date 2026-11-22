@@ -58,11 +58,11 @@ export const profile = {
 
 export const socials = {
   /** e.g. "yourname@gmail.com" */
-  email: "",
+  email: "abhinivesh437@gmail.com",
   /** e.g. "https://www.linkedin.com/in/your-handle" */
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/abhinivesh-purushothaman-260b8b385/",
   /** e.g. "https://github.com/your-handle" */
-  github: "",
+  github: "https://github.com/abhinivesh07-gif",
 };
 
 export const navItems = [
