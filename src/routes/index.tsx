@@ -9,6 +9,7 @@ import { Experience } from "@/components/portfolio/Experience";
 import { Education } from "@/components/portfolio/Education";
 import { Achievements } from "@/components/portfolio/Achievements";
 import { Certifications } from "@/components/portfolio/Certifications";
+import { Resume } from "@/components/portfolio/Resume";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { CursorGlow } from "@/components/portfolio/CursorGlow";
@@ -70,6 +71,7 @@ function Index() {
         <Education />
         <Achievements />
         <Certifications />
+        <Resume />
         <Contact />
       </main>
       <Footer />

@@ -107,7 +107,7 @@ export function Contact() {
     <Section id="contact">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-1/3 mx-auto h-[420px] max-w-4xl rounded-full bg-gradient-brand opacity-10 blur-[120px]" />
       <SectionHeading
-        index="08"
+        index="09"
         eyebrow="Contact"
         title={
           <>

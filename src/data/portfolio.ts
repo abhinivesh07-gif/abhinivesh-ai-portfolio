@@ -32,6 +32,8 @@ import certAdaptionImg from "@/assets/certificates/cert-adaption-ai-workshop.jpg
 import certAdaptionPdf from "@/assets/certificates/cert-adaption-ai-workshop.pdf.asset.json";
 import cert3dConductionImg from "@/assets/certificates/cert-ansys-3d-conduction.jpg.asset.json";
 import cert3dConductionPdf from "@/assets/certificates/cert-ansys-3d-conduction.pdf.asset.json";
+import resumePdf from "@/assets/resume.pdf.asset.json";
+import resumePreviewImg from "@/assets/resume-preview.jpg.asset.json";
 
 export const profile = {
   name: "Abhinivesh Purushothaman",
@@ -51,7 +53,16 @@ export const profile = {
   /** Path or URL to your photo, e.g. "/images/abhinivesh.jpg". Empty shows your initials. */
   photo: "",
   /** Path or URL to your resume PDF, e.g. "/resume.pdf" (put the file in /public). */
-  resumeUrl: "",
+  resumeUrl: resumePdf.url,
+};
+
+export const resume = {
+  intro:
+    "Explore my academic background, technical skills, certifications, projects and achievements.",
+  pdfUrl: resumePdf.url,
+  previewImage: resumePreviewImg.url,
+  previewAlt: "Preview of Abhinivesh Purushothaman's resume",
+  fileName: "Abhinivesh_Purushothaman_Resume.pdf",
 };
 
 export const socials = {
@@ -71,6 +82,7 @@ export const navItems = [
   { id: "experience", label: "Experience" },
   { id: "achievements", label: "Achievements" },
   { id: "certifications", label: "Certifications" },
+  { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" },
 ] as const;
 
