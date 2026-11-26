@@ -46,6 +46,8 @@ export const profile = {
   location: "Tiruppur, Tamil Nadu, India",
   tagline: "Building Intelligent Solutions. Turning Ideas Into Impact.",
   headline: "Turning Curiosity Into Code & Ideas Into Innovation.",
+  introTagline: "Turning Curiosity Into Innovation.",
+  introRoles: "AI & ML Enthusiast | Developer | Tech Innovator",
   heroDescription:
     "Exploring Artificial Intelligence, Machine Learning, and Software Development to create meaningful digital experiences.",
   intro:

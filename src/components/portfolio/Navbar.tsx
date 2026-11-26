@@ -65,20 +65,20 @@ export function Navbar() {
       >
         <Logo />
 
-        <ul className="hidden items-center gap-0.5 lg:flex">
+        <ul className="hidden items-center gap-0.5 xl:flex">
           {navItems.map((item) => (
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
                 className={cn(
-                  "relative rounded-full px-3 py-1.5 text-[0.82rem] font-medium transition-colors",
+                  "nav-glow relative rounded-full px-3 py-1.5 text-[0.82rem] font-medium transition-colors",
                   active === item.id ? "text-foreground" : "text-muted-foreground hover:text-foreground",
                 )}
               >
                 {active === item.id && (
                   <motion.span
                     layoutId="nav-active"
-                    className="absolute inset-0 -z-10 rounded-full bg-accent"
+                    className="absolute inset-0 -z-10 rounded-full border border-cyan/25 bg-accent shadow-glow"
                     transition={{ type: "spring", stiffness: 380, damping: 32 }}
                   />
                 )}
@@ -94,16 +94,18 @@ export function Navbar() {
               Let's Connect <ArrowUpRight />
             </a>
           </Button>
-          <button
+          <Button
+            variant="ghost"
+            size="icon"
             type="button"
             onClick={() => setOpen((o) => !o)}
-            className="grid size-10 place-items-center rounded-xl border border-glass-border text-foreground lg:hidden"
+            className="grid size-10 place-items-center rounded-xl border border-glass-border text-foreground xl:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-menu"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
+          </Button>
         </div>
       </nav>
 
@@ -115,7 +117,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25 }}
-            className="glass-strong mx-auto mt-2 max-w-6xl rounded-2xl p-3 lg:hidden"
+            className="glass-strong mx-auto mt-2 max-h-[calc(100svh-6rem)] max-w-6xl overflow-y-auto rounded-2xl p-3 xl:hidden"
           >
             <ul className="grid gap-1">
               {navItems.map((item, i) => (

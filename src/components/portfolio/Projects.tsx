@@ -24,7 +24,7 @@ export function Projects() {
           const flip = i % 2 === 1;
           return (
             <Reveal key={p.title}>
-              <article className="group glass border-gradient relative grid overflow-hidden rounded-3xl md:grid-cols-2">
+              <article className="project-interactive group glass border-gradient relative grid overflow-hidden rounded-3xl transition-all duration-500 hover:shadow-glow-violet md:grid-cols-2">
                 <div className={cn("relative overflow-hidden", flip && "md:order-2")}>
                   <div className="aspect-[4/3] md:aspect-auto md:h-full">
                     <img

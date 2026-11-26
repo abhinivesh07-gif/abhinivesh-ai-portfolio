@@ -1,4 +1,4 @@
-import { motion, type HTMLMotionProps } from "framer-motion";
+import { motion, useReducedMotion, type HTMLMotionProps } from "framer-motion";
 import { useRef, type ReactNode, type MouseEvent } from "react";
 import { cn } from "@/lib/utils";
 
@@ -10,12 +10,13 @@ export function Reveal({
   y = 24,
   ...rest
 }: { children: ReactNode; delay?: number; y?: number } & HTMLMotionProps<"div">) {
+  const reduced = useReducedMotion();
   return (
     <motion.div
-      initial={{ opacity: 0, y }}
+      initial={reduced ? false : { opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: reduced ? 0 : 0.7, delay: reduced ? 0 : delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
       {...rest}
     >
@@ -92,13 +93,16 @@ export function SpotlightCard({
     const r = el.getBoundingClientRect();
     el.style.setProperty("--mx", `${e.clientX - r.left}px`);
     el.style.setProperty("--my", `${e.clientY - r.top}px`);
+    el.style.setProperty("--tilt-x", `${(0.5 - (e.clientY - r.top) / r.height) * 4}deg`);
+    el.style.setProperty("--tilt-y", `${((e.clientX - r.left) / r.width - 0.5) * 4}deg`);
   };
   return (
     <div
       ref={ref}
       onMouseMove={onMove}
+      onMouseLeave={() => { ref.current?.style.setProperty("--tilt-x", "0deg"); ref.current?.style.setProperty("--tilt-y", "0deg"); }}
       className={cn(
-        "group glass border-gradient relative overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1 hover:shadow-glow-violet",
+        "card-tilt group glass border-gradient relative overflow-hidden rounded-2xl transition-all duration-500 hover:shadow-glow-violet",
         className,
       )}
     >

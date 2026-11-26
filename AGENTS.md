@@ -37,3 +37,5 @@ use the editor.
 - Contact form messages are inserted from the browser into `public.contact_messages` (insert-only for anon; no read policy), validated by the shared zod schema in `src/lib/contact-schema.ts`.
 - The AI certificate finder is a public server function (`src/lib/certificate-finder.functions.ts`) that sends the certificate list from `portfolio.ts` to Lovable AI Gateway and returns indexes into that list, so it can never show a certificate that isn't in the collection; results are re-validated by `normalizeMatches`.
 - Certification filter options (issuer, topic, year) are derived from `portfolio.ts` data via `src/lib/certificate-filters.ts`, so editing a certificate's issuer/date/topics updates the filters with no UI change.
+- Opening effects use bounded canvas rendering in ParticleScene, pause drawing offscreen, and bypass the timed intro for reduced motion or deep links to keep navigation accessible.
+- Achievement counters derive totals from the achievement collection rather than hardcoded claims, so content edits remain accurate.

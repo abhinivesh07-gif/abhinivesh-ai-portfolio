@@ -5,7 +5,7 @@ export function CursorGlow() {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!window.matchMedia("(pointer: fine)").matches) return;
+    if (!window.matchMedia("(pointer: fine)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const el = ref.current;
     if (!el) return;
     let x = window.innerWidth / 2;

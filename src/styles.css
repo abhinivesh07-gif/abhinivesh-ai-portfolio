@@ -50,6 +50,7 @@
   --color-surface: var(--surface);
   --color-glass: var(--glass);
   --color-glass-border: var(--glass-border);
+  --color-intro: var(--intro);
 
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -80,6 +81,7 @@
   --radius: 0.875rem;
 
   --background: oklch(0.145 0.016 268); /* #080B12 */
+  --intro: oklch(0.06 0.008 268);
   --foreground: oklch(0.965 0.008 260);
   --surface: oklch(0.18 0.02 268);
 
@@ -159,7 +161,7 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
   }
 
   ::selection {
@@ -281,4 +283,42 @@
   0%, 100% { transform: translateY(-10%); opacity: 0; }
   15%, 85% { opacity: 1; }
   50% { transform: translateY(110%); }
+}
+
+/* Cinematic opening: dark → spark → lightning → identity → homepage. */
+.cinematic-intro { animation: intro-exit 3.8s ease both; }
+.intro-spark {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--foreground);
+  box-shadow: 0 0 15px 5px var(--cyan), 0 0 40px 8px var(--electric);
+  animation: spark-burst 1.2s ease-out both;
+}
+.intro-reveal { animation: intro-identity 3.8s ease both; }
+.intro-progress { animation: intro-progress 3.8s linear both; }
+@keyframes spark-burst {
+  0% { opacity: 0; transform: scale(0); }
+  25% { opacity: 1; transform: scale(1); }
+  55% { opacity: 1; transform: scale(3); }
+  100% { opacity: 0; transform: scale(14); }
+}
+@keyframes intro-identity {
+  0%, 25% { opacity: 0; transform: translateY(18px); filter: blur(8px); }
+  43%, 100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@keyframes intro-exit {
+  0%, 90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes intro-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.nav-glow:hover { text-shadow: 0 0 18px var(--cyan); }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .card-tilt:hover { transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateY(-4px); }
+  .project-interactive:hover { transform: perspective(1400px) rotateX(0.6deg) rotateY(-0.6deg) translateY(-4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-intro { display: none; }
+  *, *::before, *::after { transition-duration: 0.001ms !important; }
 }

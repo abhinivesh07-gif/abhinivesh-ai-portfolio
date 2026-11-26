@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useCallback, useState } from "react";
+import { CinematicIntro } from "@/components/portfolio/CinematicIntro";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { Marquee } from "@/components/portfolio/Marquee";
@@ -57,8 +59,15 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const [introOpen, setIntroOpen] = useState(true);
+  const finishIntro = useCallback(() => {
+    setIntroOpen(false);
+    requestAnimationFrame(() => document.getElementById("portfolio-entry")?.focus({ preventScroll: true }));
+  }, []);
   return (
-    <div className="relative min-h-screen overflow-x-clip">
+    <>
+    {introOpen && <CinematicIntro onComplete={finishIntro} />}
+    <div inert={introOpen} className="relative min-h-screen overflow-x-clip">
       <CursorGlow />
       <Navbar />
       <main className="relative z-10">
@@ -76,5 +85,6 @@ function Index() {
       </main>
       <Footer />
     </div>
+    </>
   );
 }

@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowRight, Download, MapPin, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowRight, Download, MapPin, Sparkles, Send } from "lucide-react";
 import { siPython, siJavascript, siMysql, siOpenjdk, siCplusplus, siPandas } from "simple-icons";
 import { Button } from "@/components/ui/button";
 import { LinkButton } from "./LinkButton";
 import { SocialLinks } from "./SocialLinks";
 import { profile } from "@/data/portfolio";
+import { ParticleScene } from "./ParticleScene";
 
 const codeLines = [
   { text: "import numpy as np", left: "3%", top: "9%" },
@@ -100,12 +101,7 @@ function CodeBackground() {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
       <div className="bg-grid mask-radial absolute inset-0" />
-      <div className="absolute -left-40 top-10 size-[520px] animate-pulse-glow rounded-full bg-electric/20 blur-[120px]" />
-      <div
-        className="absolute -right-32 top-40 size-[460px] animate-pulse-glow rounded-full bg-violet/20 blur-[120px]"
-        style={{ animationDelay: "2s" }}
-      />
-      <div className="absolute bottom-0 left-1/3 size-[360px] rounded-full bg-cyan/10 blur-[110px]" />
+      <div className="absolute inset-0 opacity-40 lg:left-1/3"><ParticleScene /></div>
 
       {/* drifting code fragments */}
       <div className="absolute inset-0 hidden md:block">
@@ -146,7 +142,7 @@ function CodeBackground() {
 
 export function Hero() {
   return (
-    <section id="home" className="relative flex min-h-[100svh] items-center overflow-hidden pb-20 pt-32 md:pt-36">
+    <section id="home" className="relative flex min-h-[90svh] items-center overflow-hidden pb-20 pt-28 md:pt-32">
       <CodeBackground />
 
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-16 px-5 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:gap-10">
@@ -176,12 +172,12 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[2.6rem] font-semibold leading-[1.04] text-foreground sm:text-6xl lg:text-[4.1rem]"
+            className="text-[2.6rem] font-semibold leading-[1.1] text-foreground sm:text-6xl lg:text-[3.7rem]"
           >
-            Turning <span className="text-gradient">Curiosity</span> Into Code &amp;{" "}
-Ideas Into{" "}
-            <span className="text-gradient">Innovation.</span>
+            {profile.firstName}<br />
+            <span className="text-gradient">{profile.name.slice(profile.firstName.length).trim()}</span>
           </motion.h1>
+          <p className="mt-5 max-w-xl font-display text-lg text-foreground sm:text-xl">{profile.headline}</p>
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -215,13 +211,14 @@ Ideas Into{" "}
             className="mt-9 flex flex-wrap items-center gap-3"
           >
             <Button asChild variant="hero" size="xl">
-              <a href="#projects">
-                Explore My Work <ArrowRight />
+              <a href="#projects" id="portfolio-entry">
+                View My Projects <ArrowRight />
               </a>
             </Button>
             <LinkButton href={profile.resumeUrl} size="xl" download external={false} soonLabel="Soon">
               <Download /> Download Resume
             </LinkButton>
+            <Button asChild variant="glass" size="xl"><a href="#contact"><Send /> Contact Me</a></Button>
           </motion.div>
 
           <motion.div

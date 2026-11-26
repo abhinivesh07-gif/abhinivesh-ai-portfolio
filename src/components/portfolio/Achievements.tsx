@@ -1,6 +1,7 @@
 import { Award, Brain, Dumbbell, GraduationCap, Medal, Trophy, Volleyball } from "lucide-react";
 import { achievements } from "@/data/portfolio";
 import { Reveal, Section, SectionHeading, SpotlightCard } from "./primitives";
+import { AchievementCounters } from "./AchievementCounters";
 
 const icons = {
   karate: Dumbbell,
@@ -24,6 +25,7 @@ export function Achievements() {
         }
         description="Milestones from the dojo, the court and the classroom — the habits behind how I approach every challenge."
       />
+      <AchievementCounters />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {achievements.map((a, i) => {
           const Icon = icons[a.icon];
