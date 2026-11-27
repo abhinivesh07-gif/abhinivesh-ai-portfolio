@@ -13,6 +13,8 @@ import certCprImg from "@/assets/certificates/cert-hands-only-cpr.jpg.asset.json
 import certCprPdf from "@/assets/certificates/cert-hands-only-cpr.pdf.asset.json";
 import certSihImg from "@/assets/certificates/cert-sih-internal-hackathon.jpg.asset.json";
 import certSihPdf from "@/assets/certificates/cert-sih-internal-hackathon.pdf.asset.json";
+import certEducareImg from "@/assets/certificates/cert-educare-taiwan-webinar.jpg.asset.json";
+import certEducarePdf from "@/assets/certificates/cert-educare-taiwan-webinar.pdf.asset.json";
 import certKalamImg from "@/assets/certificates/cert-dr-kalam-young-achiever.jpg.asset.json";
 import certKalamPdf from "@/assets/certificates/cert-dr-kalam-young-achiever.pdf.asset.json";
 import certSmartMoveImg from "@/assets/certificates/cert-smart-move-hackathon-new.jpg.asset.json";
@@ -351,6 +353,14 @@ export const certifications: {
     date: "Sep 2026",
     image: certSihImg.url,
     url: certSihPdf.url,
+  },
+  {
+    title: "Integrated Circuits & Biomedical Innovations – Webinar Participation",
+    topics: ["Engineering"],
+    issuer: "EduCare Taiwan",
+    date: "Nov 2026",
+    image: certEducareImg.url,
+    url: certEducarePdf.url,
   },
   {
     title: "Dr. Kalam Young Achiever Award 2026",
