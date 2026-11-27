@@ -14,6 +14,7 @@ import { Certifications } from "@/components/portfolio/Certifications";
 import { Resume } from "@/components/portfolio/Resume";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
+import { AppShellExtras } from "@/components/portfolio/AppShellExtras";
 import { CursorGlow } from "@/components/portfolio/CursorGlow";
 import { profile, socials } from "@/data/portfolio";
 
@@ -84,6 +85,7 @@ function Index() {
         <Contact />
       </main>
       <Footer />
+      <AppShellExtras />
     </div>
     </>
   );
